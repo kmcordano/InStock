@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Tabs, Tab, Button } from "react-bootstrap";
 
+import StockItem from "./StockItem";
+
 const MainFooter = () => {
   return (
 	 <Container fluid className="h-100">
@@ -21,9 +23,9 @@ const MainFooter = () => {
 			 	<Button variant="light" className="mb-1 w-100">Category 3</Button>
 		  	</Col>
 		  	<Col className="bg-white">
-			 	<p>Stock 1</p>
-			 	<p>Stock 2</p>
-			 	<p>Stock 3</p>
+				<StockItem itemName="Stock Item 1"/>
+				<StockItem itemName="Stock Item 2"/>
+				<StockItem itemName="Stock Item 3"/>
 		  	</Col>
 		</Row>
 	 </Container>

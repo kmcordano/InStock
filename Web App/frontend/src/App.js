@@ -16,7 +16,7 @@ function App() {
         <MainHeader />
       </Row>
       <Row className="menu h-75">
-        <Col className="p-1" sm={"2"} lg={"3"}>
+        <Col className="p-1" sm={"2"} lg={"2"}>
           <Button variant="light" className="mb-1 w-100">Action 1</Button>
           <Button variant="light" className="mb-1 w-100">Action 2</Button>
           <Button variant="light" className="mb-1 w-100">Action 3</Button>
