@@ -1,0 +1,7 @@
+Login
+Actions
+New Transaction
+Transaction Summary
+View Stock Levels
+View Logs
+Process Restock

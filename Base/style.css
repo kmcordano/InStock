@@ -109,6 +109,10 @@ span {
    padding-left: 30px;
 }
 
+.item:nth-child(even) {
+   background-color: rgb(240,240,240);
+}
+
 .item p {
    flex-grow: 1;
    padding-left: 10px; 
@@ -121,10 +125,6 @@ span {
 
 .product {
    background-color: rgb(255,255,255);
-}
-
-.product-2 {
-   background-color: rgb(240,240,240);
 }
 
 .stock-button {
