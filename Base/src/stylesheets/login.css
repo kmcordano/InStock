@@ -1,0 +1,33 @@
+
+.body {
+   background-color: rgb(171,95,95);
+   flex-grow: 0.7;
+   display: grid;
+   grid-template-columns: 40% 20% 40%;
+   align-items: center;
+   justify-items: center;
+}
+
+.keypad {
+   display: grid;
+   grid-template-rows: 75px 75px 75px 75px;
+   grid-template-columns: 75px 75px 75px;
+   gap: 5px;
+   z-index: 1;
+}
+
+.keypad-input-field {
+   grid-row: span 1;
+   grid-column: span 3;
+}
+
+.keypad-button {
+   width: 75px;
+   height: 75px;
+}
+
+p {
+   text-align: center;
+   font-weight: bold;
+   font-size: x-large;
+}

@@ -1,0 +1,23 @@
+.body {
+   background-color: rgb(171,95,95);
+   flex-grow: 0.7;
+   align-content: center;
+   display: inherit;
+}
+
+form {
+   justify-content: center;
+   align-content: center;
+   flex-grow: 1;
+   display: grid;
+   grid-template-columns: 200px 200px 200px;
+   grid-template-rows: 200px 200px;
+   gap: 50px;
+}
+
+.action {
+   width: 200px;
+   height: 200px;
+
+   font-size: xx-large;
+}
