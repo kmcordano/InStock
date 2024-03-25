@@ -14,14 +14,21 @@ body {
 
 h1 {
    font-size: 3em;
-   margin: .25em 0 .25em 0;
+   margin: 0;
    padding: 0 !important;
-   flex-grow: 1;
+   flex-grow: 1 !important;
+   align-self: center;
+}
+
+h2 {
+   padding: 10px;
+   margin: 0;
 }
 
 .header {
    display: flex;
    padding-left: 25px;
+   height: clamp(3em, 10%, 150px);
 }
 
 .header-links {
@@ -29,3 +36,16 @@ h1 {
    padding-right: 10px;
 }
 
+.body {
+   background-color: rgb(171,95,95);
+   min-height: 300px;
+   flex-grow: 1;
+   align-content: center;
+   display: inherit;
+}
+
+.footer {
+   display: flex;
+   height: clamp(calc(1.5em + 20px), 20%, 150px);
+   align-items: flex-end;
+}

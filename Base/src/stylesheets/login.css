@@ -1,7 +1,14 @@
 
-.body {
+/* .body {
    background-color: rgb(171,95,95);
    flex-grow: 0.7;
+   display: grid;
+   grid-template-columns: 40% 20% 40%;
+   align-items: center;
+   justify-items: center;
+} */
+
+.body {
    display: grid;
    grid-template-columns: 40% 20% 40%;
    align-items: center;
