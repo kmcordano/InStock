@@ -1,0 +1,113 @@
+.body {
+   display: flex;
+}
+
+.actions-menu {
+   width: 150px;
+}
+
+.transaction-summary {
+   width: 500px;
+}
+
+.product-display {
+   flex-grow: 1;
+}
+
+.body-content {
+   margin: 25px;
+   background-color: rgb(192,135,135);
+}
+
+.action-button {
+   margin: 5px 5px 0px 5px;
+   width: calc(100% - 10px);
+   height: 40px;
+}
+
+.small-button {
+   width: 25px;
+   height: 25px;
+   margin-right: 5px;
+}
+
+.product-form {
+   display: flex;
+   width: 100%;
+   height: 100%;
+}
+
+.display-stack {
+   flex: 1;
+   height: 100%;
+}
+
+.category-buttons {
+   width: 200px;
+   height: 100%;
+}
+
+.location-tabs {
+   height: 40px;
+}
+
+.product-list {
+   background-color: white;
+   height: calc(100% - 40px);
+}
+
+.tab {
+   border-radius: 5px 5px 0px 0px;
+   border-width: 0px;
+   margin: 10px 5px 0px 0px;
+   padding: 0px 10px 0px 10px;
+   height: calc(100% - 10px);
+}
+
+.tab:hover {
+   background-color: rgb(233,233,233);
+}
+
+.active {
+   background-color: white;
+}
+
+.product {
+   display: flex;
+   align-items: center;
+   margin: 0;
+   padding: 5px;
+}
+
+.product:nth-child(even) {
+   background-color: rgb(240,240,240);
+}
+
+p {
+   margin: 0;
+   padding-left: 10px;
+}
+
+.summary-form {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.summary-header {
+   display: flex;
+}
+
+.submit-button {
+   margin: 5px;
+   padding: 0px 50px;
+}
+
+.summary-list {
+   background-color: white;
+   flex: 1;
+}
+
+.delete-button {
+   height: 25px;
+}

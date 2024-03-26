@@ -49,3 +49,7 @@ h2 {
    height: clamp(calc(1.5em + 20px), 20%, 150px);
    align-items: flex-end;
 }
+
+button {
+   background-color: rgb(211,211,211);
+}
