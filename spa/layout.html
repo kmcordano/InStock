@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>InStock</title>
+      <link rel="stylesheet" href="./css/spa.css" type="text/css">
+
+      <style>
+         .spa-shell-header, .spa-shell-header-actions, .spa-shell-header-logo,
+         .spa-shell-main, 
+         .spa-shell-footer, .spa-shell-footer-user, 
+            .spa-shell-footer-timestamp {
+            position : absolute;
+         }
+         
+         .spa-shell-header {
+            top   : 0px;
+            left  : 0px;
+            right : 0px;
+
+            display : flex;
+
+            height : 8em;
+
+            background-color:blue;
+         }
+
+         .spa-shell-header-logo {
+            left : 0px;
+
+            align-self   : center;
+            margin-left : 1.5em;
+         }
+            .spa-shell-header-logo h1 {
+               font-size : 5em;
+            }
+
+         .spa-shell-header-actions {
+            right : 0px;
+
+            margin : 0.5em 0.5em 0 0;
+
+            font-size : 1.25em;
+            font-weight : 600;
+         }
+            .spa-shell-header-actions a {
+               cursor : pointer;
+            }
+
+         .spa-shell-main {
+            background-color :white;
+            
+            top    : 8em;
+            left   : 0px;
+            bottom : 8em;
+            right  : 0px;
+         }
+
+         .spa-shell-footer {
+            background-color :green;
+
+            display : flex;
+            height  : 8em;
+            
+            left   : 0px;
+            right  : 0px;
+            bottom : 0px;
+         }
+            .spa-shell-footer-user, .spa-shell-footer-timestamp {
+               font-size : 1.5em;
+            }
+
+         .spa-shell-footer-user {
+            left   : 0px;
+            bottom : 0px;
+
+            margin : 0 0 0.5em 0.5em;
+         }
+
+         .spa-shell-footer-timestamp {
+            right  : 0px;
+            bottom : 0px;
+
+            margin : 0 0.5em 0.5em 0;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div id="spa">
+         <div class="spa-shell-header">
+            <div class="spa-shell-header-logo">
+               <h1>InStock</h1>
+            </div>
+            <div class="spa-shell-header-actions">
+               <a>Settings</a>
+               |
+               <a>About</a>
+            </div>
+         </div>
+         <div class="spa-shell-main"></div>
+         <div class="spa-shell-footer">
+            <div class="spa-shell-footer-user">
+               <h2>Employee Name - 00000000</h2>
+            </div>
+            <div class="spa-shell-footer-timestamp">
+               <h2>Time - Date</h2>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
