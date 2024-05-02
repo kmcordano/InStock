@@ -38,9 +38,13 @@ spa.shell = (function(){
 
    // -------- BEGIN UTILITY METHODS -------- //
    setJqueryMap = () => {
-      var $container = stateMap.$container;
+      var 
+         $container = stateMap.$container,
+         $mainDisplay = stateMap.$container.find('.spa-shell-main');
+
       jqueryMap = {
-         $container : $container
+         $container   : $container,
+         $mainDisplay : $mainDisplay
       };
    };
    // -------- END UTILITY METHODS --------//
@@ -55,7 +59,10 @@ spa.shell = (function(){
    initModule = ($container) => {
       stateMap.$container = $container;
       $container.html(configMap.main_html);
-      setJqueryMap;
+      setJqueryMap();
+
+      spa.login.configModule({});
+      spa.login.initModule(jqueryMap.$mainDisplay);
    };
    // -------- END PUBLIC METHODS -------- //
 

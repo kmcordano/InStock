@@ -4,85 +4,77 @@
    <head>
       <title>InStock</title>
       <link rel="stylesheet" href="./css/spa.css" type="text/css">
+      <link rel="stylesheet" href="./css/spa.shell.css" type="text/css">
 
       <style>
-         .spa-shell-header, .spa-shell-header-actions, .spa-shell-header-logo,
-         .spa-shell-main, 
-         .spa-shell-footer, .spa-shell-footer-user, 
-            .spa-shell-footer-timestamp {
-            position : absolute;
-         }
-         
-         .spa-shell-header {
-            top   : 0px;
-            left  : 0px;
-            right : 0px;
-
-            display : flex;
-
-            height : 8em;
-
-            background-color : rgb(150,55,55);
+         .spa-login {
+            width  : 100%;
+            height : 100%; 
+            
+            display         : flex;
+            align-items     : center;
+            justify-content : space-evenly;
          }
 
-         .spa-shell-header-logo {
-            left : 0px;
-
-            align-self   : center;
-            margin-left : 1.5em;
+         .spa-login-welcome, .spa-login-keypad, .spa-login-instr {
+            width      : 20%;
+            font-size  : 2em;
+            text-align : center;
          }
-            .spa-shell-header-logo h1 {
-               font-size : 5em;
-            }
 
-         .spa-shell-header-actions {
-            right : 0px;
+         .spa-login-welcome, .spa-login-instr {
 
-            margin : 0.5em 0.5em 0 0;
-
-            font-size : 1.25em;
             font-weight : 600;
          }
-            .spa-shell-header-actions a {
-               cursor : pointer;
+
+         .spa-login-keypad {
+            width  : 9.5em;
+            height : 15.5em;
+
+            display   : flex;
+            flex-wrap : wrap-reverse;
+
+            justify-content : space-evenly;
+            align-content   : space-evenly;
+         }
+
+         .spa-login-keypad-button,
+         .spa-login-keypad-box {
+            border : 2px solid #888;
+
+            background-color : rgb(211,211,211);
+         }
+
+         .spa-login-keypad-button {
+            width  : 2.5em;
+            height : 2.5em;
+
+            align-content : center;
+         }
+            .spa-login-keypad-button:hover {
+               background-color : #eee;
             }
 
-         .spa-shell-main {
-            background-color :rgb(171,95,95);
-            
-            top    : 8em;
-            left   : 0px;
-            bottom : 8em;
-            right  : 0px;
+         .spa-login-keypad-box {
+            width  : 8.5em;
+            height : 2.5em;
          }
 
-         .spa-shell-footer {
-            background-color :rgb(150,55,55);
+         .spa-login-keypad-box input[type=text] {
+            width  : 100%;
+            height : 100%;
+            border : none;
 
-            display : flex;
-            height  : 8em;
-            
-            left   : 0px;
-            right  : 0px;
-            bottom : 0px;
+            background-color : inherit;
          }
-            .spa-shell-footer-user, .spa-shell-footer-timestamp {
-               font-size : 1.5em;
+            .spa-login-keypad-box input[type=text]:focus,
+            .spa-login-keypad-box input[type=text]:hover {
+               outline   : none;
+               font-size : inherit;
+               padding   : 0.5em;
+
+               background-color : #eee;
             }
-
-         .spa-shell-footer-user {
-            left   : 0px;
-            bottom : 0px;
-
-            margin : 0 0 0.5em 0.5em;
-         }
-
-         .spa-shell-footer-timestamp {
-            right  : 0px;
-            bottom : 0px;
-
-            margin : 0 0.5em 0.5em 0;
-         }
       </style>
    </head>
 
@@ -98,7 +90,33 @@
                <a>About</a>
             </div>
          </div>
-         <div class="spa-shell-main"></div>
+         <div class="spa-shell-main">
+            <div class="spa-login">
+               <div class="spa-login-welcome">
+                  <p>Welcome to InStock!</p>
+               </div>
+               <div class="spa-login-keypad">
+                  <div class="spa-login-keypad-button">back</div>
+                  <div class="spa-login-keypad-button">0</div>
+                  <div class="spa-login-keypad-button">enter</div>
+                  <div class="spa-login-keypad-button">1</div>
+                  <div class="spa-login-keypad-button">2</div>
+                  <div class="spa-login-keypad-button">3</div>
+                  <div class="spa-login-keypad-button">4</div>
+                  <div class="spa-login-keypad-button">5</div>
+                  <div class="spa-login-keypad-button">6</div>
+                  <div class="spa-login-keypad-button">7</div>
+                  <div class="spa-login-keypad-button">8</div>
+                  <div class="spa-login-keypad-button">9</div>
+                  <div class="spa-login-keypad-box">
+                     <input type="text"/>
+                  </div>
+               </div>
+               <div class="spa-login-instr">
+                  <p>Swipe Employee Card <br/> or <br/> Enter Employee Number</p>
+               </div>
+            </div>
+         </div>
          <div class="spa-shell-footer">
             <div class="spa-shell-footer-user">
                <h2>Employee Name - 00000000</h2>
