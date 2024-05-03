@@ -40,13 +40,31 @@ spa.login = (function() {
       },
       jqueryMap = {},
       setJqueryMap,
-      onEnter,
-      onKey,
+      onClickEnter,
+      onClickKey,
+      clearEmpNumber,
+      appendEmpNumber,
+      updateEmpNumber,
+      enterEmpNumber,
       configModule,
       initModule;
    // -------- END MODULE SCOPE VARIABLES -------- //
 
    // -------- BEGIN UTILITY METHODS -------- //
+   clearEmpNumber = () => {
+      updateEmpNumber('');
+   };
+
+   appendEmpNumber = (number) => {
+      updateEmpNumber(stateMap.empNumber.concat(number));
+   };
+
+   updateEmpNumber = (newValue) => {
+      stateMap.empNumber = newValue;
+      jqueryMap.$input[0].value = stateMap.empNumber;
+   };
+
+   enterEmpNumber = () => {};
    // -------- END UTILITY METHODS --------//
 
    // -------- BEGIN DOM METHODS -------- //
@@ -59,6 +77,7 @@ spa.login = (function() {
          $keypad    : $keypad,
          $backspace : $keypad.find('.back'),
          $enter     : $keypad.find('.enter'),
+         $zero      : $keypad.find('.zero'),
          $one       : $keypad.find('.one'),
          $two       : $keypad.find('.two'),
          $three     : $keypad.find('.three'),
@@ -70,15 +89,22 @@ spa.login = (function() {
          $nine      : $keypad.find('.nine'),
          $input     : $keypad.find('.spa-login-keypad-box input[type=text]')
       };
-
-      console.log(jqueryMap.$one);
    };
    // -------- END DOM METHODS -------- //
 
    // -------- BEGIN EVENT HANDLERS --------//
-   onKey = (event) => {
-      var $tapped = $(event.elem_target);
-      console.log("button tapped");
+   onClickKey = (event) => {
+      var $tapped = $(event.target);
+
+      if($tapped[0].textContent === "back") {
+         clearEmpNumber();
+      }
+      else if($tapped[0].textContent === "enter") {
+
+      }
+      else {
+         appendEmpNumber($tapped[0].textContent);
+      }
 
       return false;
    };
@@ -92,7 +118,18 @@ spa.login = (function() {
       stateMap.$append_target = $append_target;
       setJqueryMap();
 
-      // jqueryMap.$one.bind('utap', onKey);
+      jqueryMap.$backspace.click(onClickKey);
+      jqueryMap.$enter.click(onClickKey);
+      jqueryMap.$zero.click(onClickKey);
+      jqueryMap.$one.click(onClickKey);
+      jqueryMap.$two.click(onClickKey);
+      jqueryMap.$three.click(onClickKey);
+      jqueryMap.$four.click(onClickKey);
+      jqueryMap.$five.click(onClickKey);
+      jqueryMap.$six.click(onClickKey);
+      jqueryMap.$seven.click(onClickKey);
+      jqueryMap.$eight.click(onClickKey);
+      jqueryMap.$nine.click(onClickKey);
 
       return true;
    };
