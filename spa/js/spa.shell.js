@@ -4,6 +4,7 @@
  */
 
 spa.shell = (function(){
+   'use strict';
    // -------- BEGIN MODULE SCOPE VARIABLES -------- //
    var configMap = {
       main_html : String()

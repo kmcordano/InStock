@@ -4,6 +4,7 @@
  */ 
 
 spa.login = (function() {
+   'use strict';
    // -------- BEGIN MODULE SCOPE VARIABLES -------- //
    var
       configMap = {
@@ -64,7 +65,9 @@ spa.login = (function() {
       jqueryMap.$input[0].value = stateMap.empNumber;
    };
 
-   enterEmpNumber = () => {};
+   enterEmpNumber = () => {
+      spa.model.login(stateMap.empNumber);
+   };
    // -------- END UTILITY METHODS --------//
 
    // -------- BEGIN DOM METHODS -------- //
@@ -100,7 +103,8 @@ spa.login = (function() {
          clearEmpNumber();
       }
       else if($tapped[0].textContent === "enter") {
-
+         enterEmpNumber();
+         clearEmpNumber();
       }
       else {
          appendEmpNumber($tapped[0].textContent);
