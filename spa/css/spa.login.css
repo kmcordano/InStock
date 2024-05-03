@@ -61,13 +61,14 @@
    height : 100%;
    border : none;
 
+   font-size : inherit;
+   padding   : 0.5em;
+
    background-color : inherit;
 }
    .spa-login-keypad-box input[type=text]:focus,
    .spa-login-keypad-box input[type=text]:hover {
       outline   : none;
-      font-size : inherit;
-      padding   : 0.5em;
-
+      
       background-color : #eee;
    }

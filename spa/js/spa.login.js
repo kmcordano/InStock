@@ -92,7 +92,7 @@ spa.login = (function() {
       stateMap.$append_target = $append_target;
       setJqueryMap();
 
-      jqueryMap.$one.bind('utap', onKey);
+      // jqueryMap.$one.bind('utap', onKey);
 
       return true;
    };
