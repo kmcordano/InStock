@@ -44,7 +44,8 @@
 .spa-login-keypad-button {
    width  : 2.5em;
    height : 2.5em;
-
+   cursor : pointer;
+   
    align-content : center;
 }
    .spa-login-keypad-button:hover {

@@ -21,7 +21,7 @@ spa.shell = (function(){
          + '<div class="spa-shell-main">'
          + '</div>'
          + '<div class="spa-shell-footer">'
-            + '<div class="spa-shell-footer-user">'
+            + '<div class="spa-shell-footer-user" style="display: none">'
                + '<h2>Employee Name - 00000000</h2>'
             + '</div>'
             + '<div class="spa-shell-footer-timestamp">'

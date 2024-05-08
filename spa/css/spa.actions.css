@@ -1,0 +1,31 @@
+.spa-actions {
+   align-content : center;
+
+   height : 100%;
+}
+
+.spa-actions-list {
+   display   : flex;
+   flex-wrap : wrap;
+   padding   : 0 20% 0 20%;
+
+   justify-content : center;
+   align-content   : flex-start;
+}
+
+.spa-actions-list-button {
+   background-color : rgb(211,211,211);
+
+   border : 2px solid #888;
+   width  : 150px;
+   height : 150px;
+   margin : 20px;
+   cursor : pointer;
+
+   font-size     : 2em;
+   text-align    : center;
+   align-content : center;
+}
+   .spa-actions-list-button:hover {
+      background-color : #eee;
+   }

@@ -14,9 +14,9 @@ spa.login = (function() {
                   + '<p>Welcome to InStock!</p>'
                + '</div>'
                + '<div class="spa-login-keypad">'
-                  + '<div class="spa-login-keypad-button back">back</div>'
+                  + '<div class="spa-login-keypad-button back">&#x02190</div>'
                   + '<div class="spa-login-keypad-button zero">0</div>'
-                  + '<div class="spa-login-keypad-button enter">enter</div>'
+                  + '<div class="spa-login-keypad-button enter">&#x021aa</div>'
                   + '<div class="spa-login-keypad-button one">1</div>'
                   + '<div class="spa-login-keypad-button two">2</div>'
                   + '<div class="spa-login-keypad-button three">3</div>'
@@ -98,11 +98,12 @@ spa.login = (function() {
    // -------- BEGIN EVENT HANDLERS --------//
    onClickKey = (event) => {
       var $tapped = $(event.target);
+      console.log($tapped);
 
-      if($tapped[0].textContent === "back") {
+      if($tapped[0].className === "spa-login-keypad-button back") {
          clearEmpNumber();
       }
-      else if($tapped[0].textContent === "enter") {
+      else if($tapped[0].className === "spa-login-keypad-button enter") {
          enterEmpNumber();
          clearEmpNumber();
       }
